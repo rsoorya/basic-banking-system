@@ -115,3 +115,4 @@ STATICFILES_DIRS=[(os.path.join(BASE_DIR ,'static'))]
 CRISPY_TEMPLATE_PACK = 'uni_form'
 
 django_heroku.settings(locals())
+
