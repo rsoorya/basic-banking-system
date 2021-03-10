@@ -10,7 +10,7 @@ def index(request):
     return render(request,'banktransfers/index.html')
 
 def customers(request):
-    customers = Customer.objects.all()
+    customers = Customer.objects.all().order_by('id')
     return render(request,'banktransfers/customers.html',context={'customers':customers})
     
 
@@ -54,15 +54,4 @@ def transfer(request,cust_id):
 
 
 
-    '''value = request.POST.get('name_value',None)
-        form = TransactionForm(request.POST or None)
-        dic = {'form':form ,'value':value}
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('transactions')
-    else:
-        form = TransactionForm()'''
     
-    '''dic={'form':form}
-    return render(request,'banktransfers/transfer.html',context=dic)'''
-
